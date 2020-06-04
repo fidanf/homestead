@@ -3,7 +3,7 @@ ip: "192.168.10.10"
 memory: 2048
 cpus: 2
 provider: virtualbox
-
+default_ports: false
 authorize: ~/.ssh/id_rsa.pub
 
 keys:
@@ -24,6 +24,7 @@ features:
     - mariadb: false
     - ohmyzsh: false
     - webdriver: false
+    - ansible: false
 
 # ports:
 #     - send: 50000
