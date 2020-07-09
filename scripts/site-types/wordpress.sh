@@ -79,6 +79,11 @@ block="server {
         fastcgi_buffer_size 32k;
     }
 
+    location ~ *\.(sh|sql|gz|zip)$ {
+        deny all;
+        return 404;
+    }
+
     $configureXhgui
 
     access_log off;
