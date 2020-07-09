@@ -3,6 +3,7 @@ ip: "192.168.10.10"
 memory: 2048
 cpus: 2
 provider: virtualbox
+default_ports: false
 
 authorize: ~/.ssh/id_rsa.pub
 
@@ -25,9 +26,6 @@ features:
     - ohmyzsh: false
     - webdriver: false
 
-# ports:
-#     - send: 50000
-#       to: 5000
-#     - send: 7777
-#       to: 777
-#       protocol: udp
+variables:
+  - key: GITHUB_TOKEN
+    value: foobar
