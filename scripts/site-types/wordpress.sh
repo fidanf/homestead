@@ -63,9 +63,6 @@ block="server {
     if (!-e \$request_filename) {
         # Add trailing slash to */wp-admin requests.
         rewrite /wp-admin$ \$scheme://\$host\$uri/ permanent;
-
-        # WordPress in a subdirectory rewrite rules
-        rewrite ^/([_0-9a-zA-Z-]+/)?(wp-.*|xmlrpc.php) /wp/\$2 break;
     }
 
     location ~ \.php$ {
@@ -79,7 +76,7 @@ block="server {
         fastcgi_buffer_size 32k;
     }
 
-    location ~ *\.(sh|sql|gz|zip)$ {
+    location ~* \.(sh|sql|gz|zip|yml|md|csv|.gitignore)$ {
         deny all;
         return 404;
     }
