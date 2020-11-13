@@ -10,3 +10,6 @@ phpunit.xml
 /postgres_backup
 /user-customizations.sh
 *.log
+.phpunit.result.cache
+wsl-init.log
+.backup/*
