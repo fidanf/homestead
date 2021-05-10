@@ -12,3 +12,4 @@ cryptography
 jsondiff
 pyyaml
 pyOpenSSL
+python-openstackclient
